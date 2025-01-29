@@ -1,0 +1,72 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _be01ca78-20240625 OPENFOAM=2406 version=2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Dec 25 2024
+Time   : 07:45:18
+Host   : et-2024u
+PID    : 30730
+I/O    : uncollated
+Case   : /home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-1
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from "system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+
+Creating topology patches - from boundary section
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale (1 1 1)
+    Block 0 cell size :
+        i : 0.11764459 .. 0.11764459
+        j : 0.120038 .. 0.120038
+        k : 0.12502633 .. 0.12502633
+
+No patch pairs to merge
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (-4.99979 -1.20038 -0.400296) (5 1.20038 1.10002)
+  nPoints: 23478
+  nCells: 20400
+  nFaces: 64160
+  nInternalFaces: 58240
+----------------
+Patches
+----------------
+  patch 0 (start: 58240 size: 5920) name: overset-1
+
+End
+

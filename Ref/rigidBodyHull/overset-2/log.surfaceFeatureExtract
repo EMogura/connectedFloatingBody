@@ -1,0 +1,189 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _be01ca78-20240625 OPENFOAM=2406 version=2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceFeatureExtract
+Date   : Dec 25 2024
+Time   : 07:45:43
+Host   : et-2024u
+PID    : 30815
+I/O    : uncollated
+Case   : /home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+Note: Feature line extraction only valid on closed manifold surfaces
+
+Reading surfaceFeatureExtractDict
+
+Surfaces     : HUB.obj
+Output       : HUB
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 4494 in 2 region(s)
+Vertices     : 2249
+Bounding Box : (-3.46003 -0.0207 0.108873) (-3.39743 0.0207 0.150227)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+
+Initial Feature set:
+    points : 0
+    edges  : 66
+    of which
+        region edges   : 66
+        external edges : 0
+        internal edges : 0
+
+Final Feature set:
+    points : 66
+    of which
+        convex             : 0
+        concave            : 0
+        mixed              : 0
+        non-feature        : 66
+    edges  : 66
+    of which
+        external edges     : 66
+        internal edges     : 0
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB"
+Writing 0 convex feature points to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB_convexFeaturePts.obj"
+Writing 0 concave feature points to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB_concaveFeaturePts.obj"
+Writing 0 mixed feature points to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB_mixedFeaturePts.obj"
+Writing 0 mixed feature point structure to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB_mixedFeaturePtsStructure.obj"
+Writing 66 external edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB_externalEdges.obj"
+Writing 0 internal edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB_internalEdges.obj"
+Writing 0 flat edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB_flatEdges.obj"
+Writing 0 open edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB_openEdges.obj"
+Writing 0 multiple edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB_multipleEdges.obj"
+Writing 66 region edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB_regionEdges.obj"
+Writing 66 edge directions to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/HUB_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/triSurface/HUB.eMesh"
+Surfaces     : BLADES.obj
+Output       : BLADES
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 21366 in 1 region(s)
+Vertices     : 11067
+Bounding Box : (-3.4375 -0.0952709 0.0411543) (-3.40652 0.0988987 0.23083)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+
+Initial Feature set:
+    points : 127
+    edges  : 1718
+    of which
+        region edges   : 918
+        external edges : 640
+        internal edges : 160
+
+Final Feature set:
+    points : 1698
+    of which
+        convex             : 0
+        concave            : 5
+        mixed              : 122
+        non-feature        : 1571
+    edges  : 1718
+    of which
+        external edges     : 640
+        internal edges     : 160
+        flat edges         : 0
+        open edges         : 858
+        multiply connected : 60
+
+Writing extendedFeatureEdgeMesh to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES"
+Writing 0 convex feature points to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES_convexFeaturePts.obj"
+Writing 5 concave feature points to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES_concaveFeaturePts.obj"
+Writing 122 mixed feature points to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES_mixedFeaturePts.obj"
+Writing 122 mixed feature point structure to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES_mixedFeaturePtsStructure.obj"
+Writing 640 external edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES_externalEdges.obj"
+Writing 160 internal edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES_internalEdges.obj"
+Writing 0 flat edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES_flatEdges.obj"
+Writing 858 open edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES_openEdges.obj"
+Writing 60 multiple edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES_multipleEdges.obj"
+Writing 918 region edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES_regionEdges.obj"
+Writing 1718 edge directions to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/BLADES_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/triSurface/BLADES.eMesh"
+Surfaces     : MRF_REGION.obj
+Output       : MRF_REGION
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 3350 in 1 region(s)
+Vertices     : 1677
+Bounding Box : (-3.51377 -0.113867 0.0157924) (-3.38256 0.113793 0.243397)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+
+Initial Feature set:
+    points : 0
+    edges  : 142
+    of which
+        region edges   : 0
+        external edges : 0
+        internal edges : 142
+
+Final Feature set:
+    points : 142
+    of which
+        convex             : 0
+        concave            : 0
+        mixed              : 0
+        non-feature        : 142
+    edges  : 142
+    of which
+        external edges     : 0
+        internal edges     : 142
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION"
+Writing 0 convex feature points to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION_convexFeaturePts.obj"
+Writing 0 concave feature points to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION_concaveFeaturePts.obj"
+Writing 0 mixed feature points to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION_mixedFeaturePts.obj"
+Writing 0 mixed feature point structure to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION_mixedFeaturePtsStructure.obj"
+Writing 0 external edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION_externalEdges.obj"
+Writing 142 internal edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION_internalEdges.obj"
+Writing 0 flat edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION_flatEdges.obj"
+Writing 0 open edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION_openEdges.obj"
+Writing 0 multiple edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION_multipleEdges.obj"
+Writing 0 region edges to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION_regionEdges.obj"
+Writing 142 edge directions to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/extendedFeatureEdgeMesh/MRF_REGION_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-2/constant/triSurface/MRF_REGION.eMesh"
+ExecutionTime = 0.04 s  ClockTime = 0 s
+
+End
+

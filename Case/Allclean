@@ -1,0 +1,17 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+#-----------------------------------------------------------------------------
+
+(cd 1_hullInPool && ./Allclean)
+
+(cd 2_wavePool && ./Allclean)
+
+(cd 3_hullInWavePool && ./Allclean)
+
+(cd 4_hullMoveInPool && ./Allclean)
+
+(cd 5_hullsInPool && ./Allclean)
+
+(cd 6_hullsMoveInWavePool && ./Allclean)
+
+#------------------------------------------------------------------------------

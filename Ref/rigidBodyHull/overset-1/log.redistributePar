@@ -1,0 +1,121 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _be01ca78-20240625 OPENFOAM=2406 version=2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : redistributePar -parallel -reconstruct -constant -overwrite
+Date   : Dec 25 2024
+Time   : 07:45:38
+Host   : et-2024u
+PID    : 30778
+I/O    : uncollated
+Case   : /home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-1
+nProcs : 8
+Hosts  :
+(
+    (et-2024u 8)
+)
+Pstream initialized with:
+    floatTransfer      : false
+    maxCommsSize       : 0
+    nProcsSimpleSum    : 0
+    nonBlockingExchange: 0 (tuning: 0)
+    exchange algorithm : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+sigFpe : Disabling floating point exception trapping
+Reconstructing case (like reconstructParMesh)
+
+Switching to exact matching for "processors8" processor directories
+
+Create time
+
+Create undecomposed database
+
+
+Reconstructing mesh and addressing
+
+
+Reconstructing mesh:
+
+Time = constant
+
+Per processor availability of "faces" file in "constant/polyMesh"
+    (1 1 1 1 1 1 1 1)
+
+I/O    : uncollated
+Per processor availability of "faceLabels" file in "constant/finite-area/faMesh"
+    (0 0 0 0 0 0 0 0)
+
+I/O    : uncollated
+Checking "overset-1" for undecomposed volume and area meshes...
+    volume mesh [1] : "constant"
+    area   mesh [0] : "constant"
+
+No undecomposed mesh. Creating from: "constant"
+    Boundary definition OK.
+
+Reconstructing mesh
+
+Reading hexRef8 data : cellLevel
+Reading hexRef8 data : pointLevel
+Reading hexRef8 data : level0Edge
+After distribution:
+
+Processor 0
+    Number of cells = 358876
+    Number of processor patches = 0
+    Number of processor faces = 0
+    Number of boundary faces = 32578
+
+Processor 1 (empty)
+
+Processor 2 (empty)
+
+Processor 3 (empty)
+
+Processor 4 (empty)
+
+Processor 5 (empty)
+
+Processor 6 (empty)
+
+Processor 7 (empty)
+
+Number of processor faces = 0
+Max number of cells = 358876
+Max number of processor patches = 0
+Max number of faces between processors = 0
+
+Setting caseName to "overset-1" to write reconstructed mesh (and fields).
+Restoring caseName
+Written redistributed mesh to "constant"
+
+Writing (reconstruct) procAddressing files to constant/polyMesh
+Setting caseName to "overset-1" to write reconstructed refinement data.
+Restoring caseName
+
+Reconstructing fields
+
+Time = constant
+
+Reading undecomposed mesh (on master)
+    Boundary definition OK.
+Reading local, decomposed mesh
+    Boundary definition OK.
+Reading (cell|face|point|boundary)ProcAddressing from constant/polyMesh
+
+Time = constant
+
+End
+
+Finalising parallel run

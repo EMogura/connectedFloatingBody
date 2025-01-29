@@ -1,0 +1,57 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _be01ca78-20240625 OPENFOAM=2406 version=2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : renumberMesh -constant -overwrite
+Date   : Dec 25 2024
+Time   : 07:45:41
+Host   : et-2024u
+PID    : 30802
+I/O    : uncollated
+Case   : /home/et/Desktop/Consultation/HiroshimaSano/rigidBodyHull/overset-1
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = constant
+
+Mesh region0 size: 358876
+Before renumbering
+    band           : 132028
+    profile        : 3.8498267e+09
+
+Using renumber-method: CuthillMcKee [default]
+
+Reading fields
+
+After renumbering
+    band           : 15565
+    profile        : 3.3732871e+09
+
+Writing mesh to "constant"
+Reading hexRef8 data : cellLevel
+Reading hexRef8 data : pointLevel
+Reading hexRef8 data : level0Edge
+
+Timings:
+    read mesh   : 0.69701119
+    read fields : 3.5818e-05
+    decompose   : 0
+    cell-cells  : 0
+    renumber    : 0.098413413
+    write       : 1.1995099
+TotalTime = 2.1826268 s
+
+ExecutionTime = 1.55 s  ClockTime = 2 s
+
+End
+

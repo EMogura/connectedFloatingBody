@@ -1,0 +1,3 @@
+#!/bin/bash
+. $TreeFoamUserPath/app/bashrc-FOAM-2406
+mpirun -np 5 overInterDyMFoam -parallel 2>&1 | tee solve.log

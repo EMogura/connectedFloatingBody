@@ -1,0 +1,3 @@
+コマンド '-help' が見つかりません。もしかして:
+  command 'dhelp' from deb dhelp (0.6.30)
+次を試してみてください: sudo apt install <deb name>

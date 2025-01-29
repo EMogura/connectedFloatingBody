@@ -1,0 +1,125 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2406                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      dynamicMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dynamicFvMesh       dynamicOversetFvMesh;
+
+solvers
+{
+
+    doubleHull
+    {
+        motionSolverLibs    (librigidBodyMeshMotion);
+        motionSolver         rigidBodyMotion;
+
+        report              on;
+        cellSet             cHullProp;
+
+        solver
+        {
+            type Newmark;
+        }
+
+        accelerationRelaxation 0.8;
+        accelerationDamping    0.2;
+        nIter   3;
+
+        bodies
+        {
+            hull-1
+            {
+                type            rigidBody;
+                parent          root;
+                mass           10.5;
+
+                centreOfMass     (0.0 0.0 0.0);
+                inertia         (0.0284 0 0 0.884 0 0.895);
+                // Transformation tensor and centre of rotation
+                transform       (1 0 0 0 1 0 0 0 1)  (0.5 0 0);
+                joint
+                {
+                    type            composite;
+
+                    joints
+                    (
+                        {
+                            type Px;
+                        }
+                        {
+                            type Pz;
+                        }
+                        {
+                            type Ry;
+                        }
+                    );
+                }
+                patches
+                (
+                    hullWall1
+                );
+                innerDistance   100;
+                outerDistance   200;
+            }
+            
+            hull-2
+            {
+                type            rigidBody;
+                parent          hull-1;
+                mass           10.5;
+
+                centreOfMass     (-0.6 0.0 0);
+                inertia         (0.0284 0 0 0.884 0 0.895);
+                // Transformation tensor and centre of rotation
+                transform       (1 0 0 0 1 0 0 0 1)  (-0.5 0.0 0);
+                joint
+                {
+                    type            composite;
+
+                    joints
+                    (
+                        {
+                            type Ry;
+                        }
+                    );
+                }
+                patches
+                (
+                    hullWall2
+                );
+                innerDistance   100;
+                outerDistance   200;
+            }
+        
+         }
+        restraints
+        {
+            force
+            {
+                type        externalForce;
+                body        hull-1;
+                location    (0.5 0 0);
+                force       table
+                (
+                    ( 0   (10 0 0))
+                    ( 2   (2 0 0))
+                    (20   (2 0 0))
+                );
+            }
+        }
+    }
+}
+
+
+// ************************************************************************* //

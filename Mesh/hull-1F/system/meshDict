@@ -1,0 +1,270 @@
+FoamFile
+{
+version    2;
+format    ascii;
+class    dictionary;
+location    "system";
+object    meshDict;
+}
+
+// maximum cell size in the mesh (mandatory)
+maxCellSize	0.025 mm;
+
+// minimum cell size allowed in the automatic refinement procedure (optional)
+//minCellSize	;
+
+// path to the surface mesh
+// relative from case or absolute
+surfaceFile	"model.fms";
+
+// size of the cells at the boundary (optional)
+// boundaryCellSize		1.5; // [m]
+
+// distance from the boundary at which
+// boundary cell size shall be used (optional)
+// boundaryCellSizeRefinementThickness		4.5; // [m]
+
+boundaryLayers
+{
+	// global number of layers (optional)
+	// nLayers 3;
+	
+	// thickness ratio (optional)
+	// thicknessRatio 1.2;
+	
+	// max thickness of the first layer (optional)
+	// maxFirstLayerThickness 0.5;
+	
+	// deactivate smoothing of boundary layers 
+	// (optional) activated by default 
+	// untangleLayers    0; // 
+	
+	// activates smoothing of boundary layers (optional)
+	// deactivated by default 
+	// optimiseLayer    1; // 
+	
+	optimisationParameters 
+	{
+  		// number of iterations in the procedure
+  		// for reducing normal variation (optional)
+  		nSmoothNormals	3;
+	
+  		// maximum number of iterations
+  		// of the whole procedure (optional)
+  		maxNumIterations	5;
+	
+  		// ratio between the maximum layer thickness
+  		// and the estimated feature size (optional)
+  		featureSizeFactor	0.4;
+	
+  		// activale 1 or deactivate 0 calculation of normal
+  		// (optional)
+  		reCalculateNormals	1;
+	
+  		// maximum allowed thickness variation of thickness
+  		// between two neighbouring points, devided by
+  		// the distance between the points (optional)
+  		relThicknessTol	0.05;
+	}
+	
+	patchBoundaryLayers
+	{
+	}
+}
+
+// keep template cells intersecting boundary (optional)
+// keepCellsIntersectingBoundary    1; // 1 keep or 0 only internal cells are used
+
+// keep cells in the mesh template
+// which intersect selected pathces/subsets (optional)
+// it is active when keepCellsIntersectingBoundary
+// is switched off
+keepCellsIntersectingPatches
+{
+//	patchName
+//	{
+//		keepCells 1; //1 active or 0 inactive 
+//	}
+}
+
+// remove cells where distinct parts of the mesh are joined together (optional)
+// active only when keepCellsIntersectingBoundary is active
+// checkForGluedMesh    0; // 1 active or 0 inactive
+
+// remove cells the cells intersected
+// by the selected patched/subsets
+// from the mesh template (optional)
+// it is active when keepCellsIntersectingBoundary
+// is switched on
+removeCellsIntersectingPatches
+{
+//	patchName
+//	{
+//		keepCells 1; //0 remove or 1 keep 
+//	}
+}
+
+// refinement zones at the surface
+// of the mesh (optional)
+localRefinement
+{
+}
+
+// refinement zones inside the mesh
+// based on primitive geometric objects (optional)
+objectRefinements
+{
+	fineRegion
+	{
+		type box;
+		additionalRefinementLevels	1;
+		centre (-0.05000000000000002 0.0 0.0);
+		lengthX	0.3;
+		lengthY	0.3;
+		lengthZ	0.3;
+	}
+	//coneExample
+	//{
+	//	type		cone;
+	//	cellSize	7.51;
+	//	p0			(-100 1873 -320);
+	//	p1			(-560 1400 0);
+	//	radius0		200;
+	//	radius1		300;
+	//}
+	//hollowConeExample
+	//{
+	//	type				hollowCone;
+	//	additionalRefinementLevels	2;
+	//	dditional refinement relative to maxCellSize
+	//	p0					(-100 1873 -320);
+	//	p1					(-560 1400 0);
+	//	radius0_Inner		200;
+	//	radius0_Outer		300;
+	//	radius1_Inner		200;
+	//	radius1_Outer		300;
+	//}
+	//sphereExample
+	//{
+	//	type			sphere;
+	//	cellSize		7.51;
+	//	centre			(0 700 0);
+	//	radius			200;
+	//	refinementThickness	40;
+	//}
+	//lineExample
+	//{
+	//	type		line;
+	//	cellSize	7.51;
+	//	p0			(-750 1000 450);
+	//	p1			(-750 1500 450);
+	//	refinementThickness	40;
+	//}
+}
+
+// refine regions intersected by surface meshes (optional)
+surfaceMeshRefinement
+{
+	//surface
+	//{
+	//	surfaceFile "surface.stl";
+	//	additionalRefinementLevels 3;
+	//	refinementThickness 50;
+	//}
+	//surface
+	//{
+	//	surfaceFile "surface.stl";
+	//	cellSize 1.0; // [m];
+	//}
+}
+
+// refine regions intersected by edges meshes (optional)
+edgeMeshRefinement
+{
+	//edgeMeshExample
+	//{
+	//	edgeFile "refEdges.eMesh";
+	//	additionalRefinementLevels 3;
+	//	refinementThickness 50;
+	//}
+	//cellSizeExample
+	//{
+	//	edgeFile "refEdges.vtk";
+	//	cellSize 1.0; // [m];
+	//	additionalRefinementLevels 3;
+	//}
+}
+
+anisotropicSources
+{
+	//boxExample
+	//{
+		// box is determined by its center
+		// and the size in x, y, and z directions
+		//type box;
+		//centre (0 0 0); // (x y z);
+		//lengthX 1000; // DX;
+		//lengthY 1000; // DY;
+		//lengthZ 1000; // DZ;
+
+		// scaling factor in each directions
+		//scaleX 1;
+		//scaleY 1;
+		//scaleZ 0.3;
+	//}
+
+	//planeExample
+	//{
+		// plane is determined by ist origin
+		// and the normal vector
+		//type plane;
+		//normal (0 0 1);
+		//origin (x y z);
+
+		// scaling is applied in the positive normal
+		// direction within the distance specified below
+		//scalingDistance 125;
+
+		// scaling factor in the normal direction
+		//scalingFactor 0.5;
+	//}
+}
+
+workflowControls
+{
+	//	1.templateGeneration
+	//	2.surfaceTopology
+	//	3.surfaceProjection
+	//	4.patchAssignment
+	//	5.edgeExtraction
+	//	6.boundaryLayerGeneration
+	//	7.meshOptimisation
+	//	8.boundaryLayerRefinement
+
+	//	stopAfter	edgeExtraction;
+
+	// reads the mesh from disk and
+	// restarts the meshing process after the latest step
+	// please use binary instead of ascii
+	//	restartFromLatestStep	1;
+}
+
+// setting used for assigning new names
+// of patches in the surface mesh when
+// transferring them onto the volume mesh (optional)
+renameBoundary
+{
+	newPatchNames
+	{
+		hullWall1
+		{
+			newName hullWall1;
+			type wall;
+		}
+		overset1
+		{
+			newName overset1;
+			type overset;
+		}
+	}
+}

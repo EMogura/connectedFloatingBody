@@ -1,0 +1,7 @@
+stlDir  ./model
+surfaceAngle    150
+clearMesh   yes
+parallel    no
+nCpu        4
+nSeparate   2 2 1
+

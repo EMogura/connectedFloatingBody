@@ -1,0 +1,36 @@
+#header 
+Title Fluid_Forces
+
+X.Label Time
+Y.Label force
+
+X.File forces1/0/force.dat
+X.column 0
+X.scaleFactor 1
+
+Y.File forces1/0/force.dat
+Y.column 2
+Y.scaleFactor 1
+Y.Legend F1y
+Y.Vector 0
+
+X.File forces2/0/force.dat
+X.column 0
+X.scaleFactor 1
+
+Y.File forces2/0/force.dat
+Y.column 2
+Y.scaleFactor 1
+Y.Legend F2y
+Y.Vector 0
+
+X.File forces3/0/force.dat
+X.column 0
+X.scaleFactor 1
+
+Y.File forces3/0/force.dat
+Y.column 2
+Y.scaleFactor 1
+Y.Legend F3y
+Y.Vector 0
+

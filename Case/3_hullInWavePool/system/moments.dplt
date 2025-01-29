@@ -1,0 +1,37 @@
+#header 
+Title Fluid_Moments
+
+X.Label Time
+Y.Label Moment
+
+X.File forces1/0/moment.dat
+X.column 0
+X.scaleFactor 1
+
+Y.File forces1/0/moment.dat
+Y.column 1
+Y.scaleFactor 1
+Y.Legend Mx
+Y.Vector 0
+
+X.File forces1/0/moment.dat
+X.column 0
+X.scaleFactor 1
+
+Y.File forces1/0/moment.dat
+Y.column 2
+Y.scaleFactor 1
+Y.Legend My
+Y.Vector 0
+
+X.File forces1/0/moment.dat
+X.column 0
+X.scaleFactor 1
+
+Y.File forces1/0/moment.dat
+Y.column 3
+Y.scaleFactor 1
+Y.Legend Mz
+Y.Vector 0
+
+

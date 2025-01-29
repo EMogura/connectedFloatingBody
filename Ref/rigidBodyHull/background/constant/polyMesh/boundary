@@ -1,0 +1,111 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      binary;
+    arch        "LSB;label=32;scalar=64";
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+13
+(
+    outlet
+    {
+        type            patch;
+        nFaces          1989;
+        startFace       2381756;
+    }
+    inlet
+    {
+        type            patch;
+        nFaces          1989;
+        startFace       2383745;
+    }
+    ymin
+    {
+        type            symmetry;
+        inGroups        1(symmetry);
+        nFaces          4680;
+        startFace       2385734;
+    }
+    ymax
+    {
+        type            symmetry;
+        inGroups        1(symmetry);
+        nFaces          4680;
+        startFace       2390414;
+    }
+    zmin
+    {
+        type            symmetry;
+        inGroups        1(symmetry);
+        nFaces          6120;
+        startFace       2395094;
+    }
+    atmosphere
+    {
+        type            patch;
+        nFaces          6120;
+        startFace       2401214;
+    }
+    overset-1
+    {
+        type            overset;
+        inGroups        1(overset);
+        nFaces          5920;
+        startFace       2407334;
+    }
+    HULL
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          26566;
+        startFace       2413254;
+    }
+    HULL_DISK
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          92;
+        startFace       2439820;
+    }
+    BLADES
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          26507;
+        startFace       2439912;
+    }
+    HUB_DISK
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          88;
+        startFace       2466419;
+    }
+    HUB
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1830;
+        startFace       2466507;
+    }
+    oversetPatch
+    {
+        type            overset;
+        inGroups        1(overset);
+        nFaces          11291;
+        startFace       2468337;
+    }
+)
+
+// ************************************************************************* //
