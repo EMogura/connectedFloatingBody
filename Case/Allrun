@@ -12,6 +12,6 @@ cd "${0%/*}" || exit                                # Run from this directory
 
 (cd 5_hullsInPool && ./Allrun)
 
-(cd 6_hullsMoveInWavePool && ./Allclean)
+(cd 6_hullsMoveInWavePool && ./Allrun)
 
 #------------------------------------------------------------------------------
